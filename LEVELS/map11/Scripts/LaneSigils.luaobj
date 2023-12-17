@@ -1,0 +1,50 @@
+local L0_1, L1_1, L2_1, L3_1, L4_1, L5_1, L6_1
+L0_1 = {}
+L1_1 = {}
+L1_1.Name = "Top"
+L2_1 = Make3DPoint
+L3_1 = 2721
+L4_1 = 22.09
+L5_1 = 11893.56
+L2_1 = L2_1(L3_1, L4_1, L5_1)
+L1_1.Pos = L2_1
+L2_1 = {}
+L2_1.Name = "Bot"
+L3_1 = Make3DPoint
+L4_1 = 11861.1
+L5_1 = -44.44
+L6_1 = 3208.69
+L3_1 = L3_1(L4_1, L5_1, L6_1)
+L2_1.Start = L3_1
+L0_1[1] = L1_1
+L0_1[2] = L2_1
+LaneSigilDefinitions = L0_1
+
+function L0_1()
+  local L0_2, L1_2, L2_2, L3_2, L4_2, L5_2, L6_2, L7_2
+  L0_2 = ipairs
+  L1_2 = LaneSigilDefinitions
+  L0_2, L1_2, L2_2 = L0_2(L1_2)
+  for L3_2, L4_2 in L0_2, L1_2, L2_2 do
+    L5_2 = {}
+    L6_2 = L4_2.Pos
+    L5_2.Pos = L6_2
+    L5_2.EffectName = "ItemMuramanaToggle.troy"
+    L6_2 = L4_2.Pos
+    L5_2.TargetPos = L6_2
+    L5_2.FOWVisibilityRadius = 10
+    L5_2.SendIfOnScreenOrDiscard = false
+    L5_2.PersistsThroughReconnect = true
+    L5_2.BindFlexToOwnerPAR = false
+    L5_2.FollowsGroundTilt = true
+    L5_2.FacesTarget = true
+    L5_2.HideFromSpectator = false
+    L5_2.TimeoutInFOW = 99999
+    L5_2.Scale = 0.5
+    L6_2 = SpellEffectCreateFromTable
+    L7_2 = L5_2
+    L6_2(L7_2)
+  end
+end
+
+SpawnLaneSigilEffects = L0_1

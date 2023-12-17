@@ -1,0 +1,48 @@
+local L0_1, L1_1
+
+function L0_1()
+  local L0_2, L1_2
+  L0_2 = OnInit
+  L0_2()
+  L0_2 = PreloadCharacter
+  L1_2 = "Leona"
+  L0_2(L1_2)
+  L0_2 = PreloadCharacter
+  L1_2 = "Lux"
+  L0_2(L1_2)
+  L0_2 = PreloadCharacter
+  L1_2 = "Xerath"
+  L0_2(L1_2)
+end
+
+OnInitClient = L0_1
+
+function L0_1()
+  local L0_2, L1_2, L2_2
+  L0_2 = OnInit
+  L0_2()
+  L0_2 = ApplyPersistentBuffToAllChampions
+  L1_2 = "AscRespawn"
+  L2_2 = false
+  L0_2(L1_2, L2_2)
+end
+
+OnInitServer = L0_1
+
+function L0_1()
+  local L0_2, L1_2
+  L0_2 = PreloadCharacter
+  L1_2 = "AscRelic"
+  L0_2(L1_2)
+  L0_2 = PreloadCharacter
+  L1_2 = "AscWarpIcon"
+  L0_2(L1_2)
+  L0_2 = PreloadCharacter
+  L1_2 = "AscXerath"
+  L0_2(L1_2)
+  L0_2 = PreloadSpell
+  L1_2 = "AscRespawn"
+  L0_2(L1_2)
+end
+
+OnInit = L0_1
